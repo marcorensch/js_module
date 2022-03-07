@@ -26,8 +26,9 @@
     font-family: 'Roboto';
     font-weight: normal;
     box-sizing: border-box;
+      transition: all ease-in-out 200ms;
 }
-  
+
 
 @keyframes fadeIn {
     0% {
@@ -37,6 +38,15 @@
     100% {opacity:1;
     display: block;}
   }
+
+@keyframes fadeOut {
+    0% {
+        opacity:1;
+        display: block;
+    }
+    100% {opacity:0;
+        display: none;}
+}
 
 header {
     background: rgb(230,0,0);
@@ -54,6 +64,12 @@ header {
     max-height: 99%;
     display: flex;
     justify-content: space-between;
+}
+
+main {
+    margin-top: 20px;
+    min-height: 80vh;
+    margin-bottom:80px;
 }
 
 body section.banner {
@@ -93,7 +109,6 @@ nav ul.menu {
 }
 
 nav ul.menu li {
-    display: block;
     padding-left: 10px;
     padding-right: 10px;
     height: 100%;
@@ -103,6 +118,12 @@ nav ul.menu li {
     min-width: 150px;
     min-height: 40px;
     box-sizing: border-box;
+
+    position: relative;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto Thin';
+    text-align: center;
 }
 
 nav ul.menu li:not(:last-of-type){
@@ -111,10 +132,8 @@ nav ul.menu li:not(:last-of-type){
 
 nav ul.menu li a {
     text-decoration: none;
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.5);
-    font-family: 'Roboto Thin';
-    text-align: center;
+    position: absolute;
+    inset: 0;
 }
 
 nav ul.menu li.active {
@@ -175,17 +194,22 @@ p>img{
     border-radius: 6px;
     margin: 10px 10px 10px 0;
     transition: all ease-in-out .2s;
-    
+
 }
 
 .mobileMenuToggler{
-    color: aliceblue;
+    color: rgba(255,255,255, .6);
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-right: 30px;
-    font-size: 1.2em;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.mobileMenuToggler:hover {
+    color: rgba(255, 255, 255, .9);
 }
 
 .modal{
@@ -196,8 +220,8 @@ p>img{
     top:0;
     left:0;
     right:0;
-    bottom:0; 
-    background-color: rgba(0,0,0, .8);
+    bottom:0;
+    background-color: rgba(0,0,0, .95);
     backdrop-filter: blur(5px);
 }
 .visible{
@@ -206,11 +230,16 @@ p>img{
     animation-fill-mode: forwards;
 }
 
+.hidden {
+    animation: fadeIn 0.5s;
+    animation-fill-mode: backwards;
+}
+
 .modal div.modal-content{
     position: relative;
     height: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -221,9 +250,6 @@ p>img{
     display: block;
     text-align: center;
     padding: 10px;
-}
-
-.modal li a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
     font-size: 2em;
@@ -231,9 +257,22 @@ p>img{
     text-align: center;
     font-family: 'Roboto Thin';
     text-transform: uppercase;
+    position: relative;
+    width: 100%;
 }
 
+.modal li:hover{
+    color: rgba(255, 255, 255, 0.8);
+}
 
+.modal li.active{
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.modal li a {
+    position: absolute;
+    inset:0;
+}
 
 .modal li.active a {
     color: #fff;
@@ -245,11 +284,12 @@ p>img{
     top: 0px;
     right:0px;
     margin:20px;
+    cursor: pointer;
 }
 
 .modal .modal-close i {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .nx-flex {
@@ -263,7 +303,7 @@ p>img{
     width: 100%;
 }
 .nx-flex>div:not(:first-of-type){
-   
+
 }
 
 .page-headline > *{
@@ -272,9 +312,9 @@ p>img{
 }
 
 .nx-card{
-    display: relative;
+    position: relative;
     border-radius: 6px;
-    
+
     background-color: rgb(243, 243, 243);
     color: rgb(32, 32, 32);
     overflow: hidden;
@@ -306,20 +346,28 @@ footer{
     padding: 20px;
     background-color: rgb(14, 14, 14);
     color: rgb(148, 148, 148);
-    
+
+    position: fixed;
+    bottom: 0;
+    width:100%;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    border-top: 1px solid firebrick;
 }
+
 footer > div{
     width: auto;
 }
+
 footer > div > span {
     font-family: 'Consolas', Courier, monospace;
     text-transform: lowercase;
 }
 
-@media screen and (min-width: 765px){
+@media screen and (min-width: 960px){
 
     main {
         max-width: 1800px;

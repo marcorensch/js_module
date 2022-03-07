@@ -6,10 +6,7 @@
         </div>
         <nav>
             <ul class="menu">
-                <li class="active"><a href="index.html">Startseite</a></li>
-                <li><a href="infos.html">Infos</a></li>
-                <li><a href="cards.html">Cards</a></li>
-                <li><a href="map.html">Map</a></li>
+                <?php include "nav.php"; ?>
             </ul>
         </nav>
         <div class="mobileMenuToggler nx-modal" nx-modal="menu-modal">

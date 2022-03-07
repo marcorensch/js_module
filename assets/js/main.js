@@ -9,14 +9,13 @@ console.log(user);
 docReady(function() {
     // DOM is loaded and ready for manipulation here
     let modals = document.getElementsByClassName('modal')
-    
+
     let modalToggler = document.getElementsByClassName('nx-modal');
     for(let item of modalToggler){
         let modalId = item.getAttribute('nx-modal');
         let modal = new Modal (modalId);
         console.log(document.getElementById(modalId).querySelector('.modal-close'))
         document.getElementById(modalId).querySelector('.modal-close').addEventListener('click',(e) => {
-            console.log('close clicked')
             modal.toggle()
         })
         item.addEventListener('click', function(e){
@@ -34,4 +33,4 @@ docReady(function() {
     } else {
         document.addEventListener("DOMContentLoaded", fn);
     }
-} 
+}

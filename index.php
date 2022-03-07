@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Modules</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.scss">
-    <link rel="stylesheet" type="text/css" href="assets/frameworks/fontAwesome/css/all.min.css">
-    <script type="module" src="assets/js/main.js?v=1.1"></script>
-</head>
+<?php include "./partials/docHead.php";?>
 <body>
-    <?php include "./partials/header.php";?>
+    <?php
+    $site = "Startseite";
+    include "./partials/header.php";?>
 
     <section class="banner parallax">
         <div class="page-headline">
@@ -45,23 +39,7 @@
     </main>
 
     <?php include "./partials/footer.php";?>
-
-    <div id="menu-modal" class="modal">
-        <div class="modal-close">
-            <i class="modal-close fa-solid fa-close"></i>
-        </div>
-        <div class="modal-content">
-            <div>
-                <ul>
-                    <li class="active"><a href="index.html">Startseite</a></li>
-                    <li><a href="infos.html">Infos</a></li>
-                    <li><a href="cards.html">Cards</a></li>
-                    <li><a href="map.html">Map</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
+    <?php include "./partials/modal.php";?>
 
 </body>
 </html>
