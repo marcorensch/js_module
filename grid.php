@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    $addCSS = ['assets/css/grid.scss'];
+    $addCSS = ['assets/css/grid.css'];
     include "./partials/docHead.php";
     ?>
 <body>

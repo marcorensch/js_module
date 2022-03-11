@@ -3,7 +3,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Modules</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.scss">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/button.css">
     <?php if(isset($addCSS) && count($addCSS)){
         foreach ($addCSS as $styleSrc){
             echo '<link rel="stylesheet" type="text/css" href="'.$styleSrc.'?v=1.4">';

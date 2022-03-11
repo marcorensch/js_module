@@ -1,0 +1,74 @@
+.nx-button{
+    display: block;
+    font-size: 1.2em;
+    padding:5px 30px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+    position: relative;
+}
+
+.nx-button-large{
+    padding:8px 12px;
+}
+
+.nx-button-default{
+    background-color: #3b3b3b;
+    color: rgba(21, 21, 21, 0.8)
+}
+
+.nx-button-primary {
+    position:relative;
+    border:none;
+    background-color: #282828;
+    color: rgba(255,255,255, .9);
+    transition: all ease-in-out 200ms;
+}
+.nx-button-primary:hover{
+    background-color: #111111;
+    transition: all ease-in-out 200ms;
+}
+
+.nx-button-primary:before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 0px;
+    right:0px;
+    bottom:4px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, rgba(230,0,0,1) 0%, rgba(143,0,255,1) 100%);
+    z-index: -1;
+    filter: grayscale(1);
+    transition: all ease-in-out 200ms;
+}
+.nx-button-primary:hover:before{
+    filter: grayscale(0);
+}
+
+.nx-button-danger {
+    position:relative;
+    border:none;
+    background: rgb(150, 25, 9);
+    color: rgba(255,255,255, .9);
+    transition: all ease-in-out 200ms;
+}
+.nx-button-danger:hover{
+    background-color: rgba(230,0,0,1);
+    transition: all ease-in-out 200ms;
+}
+
+.nx-button-danger:before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 0px;
+    right:0px;
+    bottom:4px;
+    border-radius: 3px;
+    background-color: rgba(230,0,0,1);
+    z-index: -1;
+    transition: all ease-in-out 200ms;
+}
+
