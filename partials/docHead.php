@@ -13,6 +13,12 @@
     <link rel="stylesheet" type="text/css" href="assets/frameworks/fontAwesome/css/all.min.css">
     <script type="module" src="assets/js/main.js?v=1.3"></script>
 
+    <?php if(isset($addScript) && count($addScript)){
+        foreach ($addScript as $script){
+            echo '<script type="module" src="'.$script.'?v=1.0"></script>';
+        }
+    }?>
+
     <link rel="icon" type="image/png" href="assets/img/fav/favicon-32x32.png">
     <link rel="icon" type="image/vnd.microsoft.icon" href="assets/img/fav/favicon-32x32.ico">
 

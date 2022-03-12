@@ -1,0 +1,2 @@
+{"title":"herr","firstname":"Marco","lastname":"Rensch","email":"me@local.ch","message":"Test"}
+{"title":"frau","firstname":"Nicole","lastname":"Muggwyler","email":"me@lod","message":"fefe"}

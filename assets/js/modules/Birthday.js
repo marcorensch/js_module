@@ -4,4 +4,8 @@ export default class Birthday{
         this.month = month;
         this.fullyear = fullyear;
     }
+
+    output(){
+        return this.day +'.'+this.month+'.'+this.fullyear;
+    }
 }

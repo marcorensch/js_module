@@ -1,0 +1,35 @@
+table * {
+    border: 0;
+}
+table{
+    width: 100%;
+    min-width: 800px;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+thead th {
+    border-bottom: 1px solid lightgray;
+}
+th{
+    font-weight: bold;
+    padding: 4px;
+}
+
+td{
+    padding: 10px;
+}
+
+tbody tr td {
+    color: rgba(0,0,0, 0.8);
+}
+tr:nth-child(even){
+    background: rgba(0,0,0, 0.05);
+}
+
+tbody tr:hover{
+    background: rgba(0,0,0, 0.1);
+}
+
+tbody tr:hover td {
+    color: rgba(0,0,0, 1);
+}
